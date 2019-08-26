@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<h1 id="1">0</h1>
+<button onclick="click1()">start</button>
+<button onclick="click2()">pause</button>
+<button onclick="click3()">reset</button>
+</body>
+<script language="JavaScript">
+    number=0
+    timer = setInterval(time, 1000)
+
+    function time() {
+        document.getElementById('1').innerHTML = number;
+        number++;
+    }
+
+    function click1() {
+        timer = setInterval(time, 1000)
+    }
+
+    function click3() {
+        number=0
+        document.getElementById('1').innerHTML = number
+        clearInterval(time)
+    }
+    function click2() {
+        timer = clearTimeout(timer)
+
+    }
+</script>
+</html>
